@@ -9,7 +9,7 @@ disney = pd.read_csv('disney_plus_titles.csv')
 hulu = pd.read_csv('hulu_titles.csv')
 
 def clean_data(df, platform):
-    df['platform'] = platform  # 添加平台标识
+    df['platform'] = platform  
     df['date_added'] = pd.to_datetime(df['date_added'], errors='coerce')  # 统一日期格式
     df['release_year'] = df['release_year'].fillna(0).astype(int)  # 处理年份空值
     return df

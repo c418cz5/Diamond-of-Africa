@@ -1,7 +1,5 @@
---This code is manually written, no AI assistance used
-
-
-
+-- This code is manually written, no AI assistance used
+-- Step 1: Create 5 tables 
 CREATE TABLE IF NOT EXISTS director (
     director_id INT PRIMARY KEY AUTO_INCREMENT,
     director_name VARCHAR(100) NOT NULL,
@@ -12,8 +10,6 @@ CREATE TABLE IF NOT EXISTS genre (
     genre_id INT PRIMARY KEY AUTO_INCREMENT,
     genre_name VARCHAR(50) NOT NULL UNIQUE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
 
 CREATE TABLE IF NOT EXISTS actor (
     actor_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -37,7 +33,6 @@ CREATE TABLE IF NOT EXISTS content (
         ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
 CREATE TABLE IF NOT EXISTS content_genre (
     content_genre_id INT PRIMARY KEY AUTO_INCREMENT,
     content_id INT NOT NULL,
@@ -49,8 +44,9 @@ CREATE TABLE IF NOT EXISTS content_genre (
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     UNIQUE KEY uk_content_genre (content_id, genre_id)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- Step 2: Insert 1 record into each table 
 INSERT INTO director (director_name, country)
 VALUES ('Steven Spielberg', 'United States');
 
@@ -62,7 +58,6 @@ VALUES ('Leonardo DiCaprio', 'United States');
 
 INSERT INTO content (show_id, platform, type, title, director_id, release_year, rating, duration, description)
 VALUES ('s42', 'Netflix', 'Movie', 'Jaws', 1, 1975, 'PG', '124 min', 'A great white shark terrorizes Amity Island');
-
 
 INSERT INTO content_genre (content_id, genre_id)
 VALUES (1, 1);
