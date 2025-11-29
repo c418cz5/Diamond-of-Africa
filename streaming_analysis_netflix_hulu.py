@@ -6,8 +6,8 @@ import os
 plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
 plt.rcParams['axes.unicode_minus'] = False
 
-netflix_path = "C:\Users\Admin\OneDrive - Navitas Limited\DDWT\netflix_titles.csv"
-hulu_path ="C:\Users\Admin\OneDrive - Navitas Limited\DDWT\hulu_titles.csv"
+netflix_path = "C:\\Users\\Admin\\OneDrive - Navitas Limited\\DDWT\\netflix_titles.csv"
+hulu_path ="C:\\Users\\Admin\\OneDrive - Navitas Limited\\DDWT\\hulu_titles.csv"
 
 # LET ME CHECK  if files exits
 
